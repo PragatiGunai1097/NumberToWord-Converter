@@ -8,9 +8,6 @@ const teens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen',
 const tens  = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty',
                'Sixty', 'Seventy', 'Eighty', 'Ninety'];
 
-// const scales = ['', 'Thousand', 'Million', 'Billion',
-//                 'Trillion', 'Quadrillion', 'Quintillion'];
-
 const scales = ['', 'Thousand', 'Million', 'Billion',
                 'Trillion', 'Quadrillion', 'Quintillion',
                 'Sextillion', 'Septillion', 'Octillion',

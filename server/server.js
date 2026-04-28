@@ -34,7 +34,7 @@ function buildItems(numbers) {
     return numbers.map(n => ({
         number: n,
         words: numberToWords(n),
-       // isOver9000: BigInt(n) > 9000n,
+      
         isOver9000: (BigInt(n) > 9000n) || (BigInt(n) < -9000n),
     }));
 }
