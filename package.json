@@ -1,0 +1,12 @@
+{
+  "name": "number-to-words-sorter",
+  "version": "1.2.0",
+  "description": "Vanilla JS app + zero-dependency Node backend that converts a comma-separated list of numbers to English words and sorts them alphabetically.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

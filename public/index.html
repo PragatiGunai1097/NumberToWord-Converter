@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alphabetical Sorting Screen — Number to Words</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="background-orbs" aria-hidden="true">
+        <span class="orb orb--one"></span>
+        <span class="orb orb--two"></span>
+        <span class="orb orb--three"></span>
+    </div>
+
+    <main class="container">
+        <header class="hero">
+            <p class="eyebrow">Alphabetical Sorting Screen</p>
+            <h1>Number&nbsp;to&nbsp;Words&nbsp;Sorter</h1>
+            <!-- <p class="subtitle">
+                Type a comma-separated list of whole numbers, submit them, then
+                sort them alphabetically by their spelled-out form.
+            </p> -->
+            <p>Convert numbers to words, then sort them alphabetically</p>
+        </header>
+
+        <section class="card" aria-labelledby="form-heading">
+            <h2 id="form-heading" class="visually-hidden"> Enter your numbers</h2>
+
+            <form id="numberForm" novalidate>
+                <label for="numberInput" class="field-label">
+                    Enter Your numbers
+                    <span class="field-hint">
+                        whole numbers, separated by commas (e.g.
+                        <code>1, 2, 3, 11, 8999, 16</code>)
+                    </span>
+                </label>
+
+                <textarea
+                    id="numberInput"
+                    name="numberInput"
+                    placeholder="1, 2, 3, 11, 8999, 16"
+                    autocomplete="off"
+                    spellcheck="false"
+                    rows="3"
+                ></textarea>
+
+                <div class="actions">
+                    <button id="submitButton" type="submit" class="btn btn-primary">
+                        Submit Input
+                    </button>
+                    <button id="sortButton" type="button" class="btn btn-accent" disabled>
+                        Sort Text
+                    </button>
+                    <button id="clearButton" type="button" class="btn btn-ghost">
+                        Clear
+                    </button>
+                    <button id="exampleButton" type="button" class="btn btn-ghost">
+                        Try an example
+                    </button>
+                </div>
+            </form>
+
+            <div
+                id="errorContainer"
+                class="error-banner"
+                role="alert"
+                aria-live="polite"
+                hidden
+            ></div>
+        </section>
+
+        <section
+            id="resultsSection"
+            class="results"
+            aria-labelledby="results-heading"
+            hidden>
+            <div class="results-header">
+                <h2 id="results-heading">
+                    <span id="resultsTitle">Submitted numbers</span>
+                </h2>
+                <span id="resultsCount" class="pill"></span>
+            </div>
+            <ol id="resultContainer" class="result-list"></ol>
+        </section>
+
+        <footer class="page-footer">
+            <span>
+                Numbers greater than <strong>9000</strong> are flagged with a
+                special visual cue.
+            </span>
+        </footer>
+    </main>
+
+    <!-- Custom tooltip element shared across the page -->
+    <div id="tooltip" class="tooltip" role="tooltip" hidden>
+        <!-- <div class="tooltip-label">Spelled out</div> -->
+        <div class="tooltip-text" id="tooltipText"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
